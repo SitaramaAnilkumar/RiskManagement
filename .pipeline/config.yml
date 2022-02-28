@@ -14,20 +14,20 @@ stages:
   Acceptance:
     cloudFoundryDeploy: false
     cfApiEndpoint: "https://api.cf.us10.hana.ondemand.com"
-    cfOrg: "bf6bcc2dtrial"
+    cfOrg: "2bcd3169trial"
     cfSpace: "dev"
-    cfAppName: "risk-manage"
+    cfAppName: "app"
     cfCredentialsId: "deploy-to-cf"
     uiVeri5ExecuteTests: false
 
   Release:
     cloudFoundryDeploy: true
     cfApiEndpoint: "https://api.cf.us10.hana.ondemand.com"
-    cfOrg: "bf6bcc2dtrial"
+    cfOrg: "2bcd3169trial"
     cfSpace: "dev"
-    cfAppName: "risk-manage"
+    cfAppName: "riskmanagement"
     cfCredentialsId: "deploy-to-cf"
-    tmsUpload: true
+    tmsUpload: false
 
 steps:
   artifactPrepareVersion:
@@ -39,4 +39,6 @@ steps:
   cloudFoundryDeploy:
     mtaDeployParameters: "-f --version-rule ALL"
 
-
+  tmsUpload:
+    nodeName: "qa"
+    credentialsId: "tms-sk"
