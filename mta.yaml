@@ -64,6 +64,13 @@ modules:
           timeout: 60000
           forwardAuthToken: true
 resources:
+  # -------------------- DESTINATION SERVICE -------------------
+  - name: app-dest
+  # ------------------------------------------------------------
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
   # ----------------------- UAA SERVICE ------------------------
   - name: riskmanagement-uaa
   # ------------------------------------------------------------
