@@ -1,7 +1,6 @@
 ---
 general:
   buildTool: "mta"
-
 stages:
   Build:
     mavenExecuteStaticCodeChecks: false
@@ -16,7 +15,7 @@ stages:
     cfApiEndpoint: "https://api.cf.us10.hana.ondemand.com"
     cfOrg: "2bcd3169trial"
     cfSpace: "dev"
-    cfAppName: "app"
+    cfAppName: "riskmanagement"
     cfCredentialsId: "deploy-to-cf"
     uiVeri5ExecuteTests: false
 
